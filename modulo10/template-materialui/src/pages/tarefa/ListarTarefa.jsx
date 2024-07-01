@@ -52,6 +52,7 @@ const ListarTarefa = () => {
   const handleClose = () => setOpen(false);
   const handleOpenEditar = () => setOpenEditar(true);
   const handleCloseEditar = () => setOpenEditar(false);
+  const removeAll = () => setTarefas([]);
 
   //O array definido acima é setado como conteúdo do state Tarefas na renderização inicial do componente.
   useEffect(() => {
@@ -135,7 +136,7 @@ const ListarTarefa = () => {
         </CardContent>
         <CardActions>
             <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
-            <Button size="small" variant="outlined">Cancelar</Button>
+            <Button size="small" variant="outlined" onClick={removeAll}>Remover tudo</Button>
       </CardActions> 
     </Card>
     <div>
